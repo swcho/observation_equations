@@ -36,6 +36,10 @@ if (WIN32)
 else()
 	find_package(GLUT REQUIRED)
 	if(GLUT_FOUND)
+		# set freeglut from homebrew
+		set(GLUT_glut_LIBRARY /opt/homebrew/Cellar/freeglut/3.6.0/lib/libglut.dylib)
+		include_directories(/opt/homebrew/Cellar/freeglut/3.6.0/include)
+
 		message("GLUT found")
 		message ("GLUT_glut_LIBRARY: " ${GLUT_glut_LIBRARY})
 	endif()

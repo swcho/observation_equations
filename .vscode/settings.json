@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "*.dbclient-js": "javascript",
+    "*.mdx": "mdx",
+    "eigen": "cpp",
+    "fg_internal.h": "c"
+  },
+  "cmake.sourceDirectory": "/Users/swcho/projects/temp/observation_equations/codes/c++Examples",
+  "cmake.cmakePath": "/Applications/CMake.app/Contents/bin/cmake"
+}

@@ -1,0 +1,77 @@
+: 1754789496:0;git submodule init
+: 1754789502:0;git submodule update
+: 1754789625:0;ll
+: 1754789639:0;mkdir build; cd build
+: 1754789644:0;cmake ..
+: 1754789672:0;cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 ..
+: 1754789767:0;make
+: 1754789945:0;mkdir build; cd build
+: 1754789948:0;cmake ..
+: 1754789955:0;cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 ..
+: 1754789999:0;make
+: 1754793097:0;cmake --version
+: 1754793549:0;exit
+: 1754793555:0;ll
+: 1754793564:0;cd codes/c++Examples
+: 1754793565:0;ll
+: 1754793573:0;mkdir build; cd build
+: 1754793596:0;/Applications/CMake.app/Contents/bin/ccmake --version
+: 1754793600:0;/Applications/CMake.app/Contents/bin/ccmake ..
+: 1754793607:0;/Applications/CMake.app/Contents/bin/cmake ..
+: 1754794042:0;exit
+: 1754794046:0;ll
+: 1754794068:0;rm -rf build; mkdir build; cd build
+: 1754794074:0;cmake ..
+: 1754794254:0;cmake3 ..
+: 1754794264:0;make build
+: 1754794268:0;make
+: 1754794365:0;pwd
+: 1754794368:0;git remote -vv
+: 1754794465:0;make
+: 1754794574:0;brew install freeglut
+: 1754794797:0;ll /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/System/Library/Frameworks/GLUT.framework/Header
+: 1754794807:0;ll /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/System/Library/Frameworks/GLUT.framework
+: 1754794814:0;ll /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/System/Library/Frameworks/GLUT.framework/Headers
+: 1754794857:0;ll /opt/homebrew/Cellar/freeglut/3.6.0:
+: 1754794860:0;ll /opt/homebrew/Cellar/freeglut/3.6.0
+: 1754794864:0;ll /opt/homebrew/Cellar/freeglut/3.6.0/include
+: 1754795783:0;ll  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/System/Library/Frameworks/OpenGL.framewor
+: 1754795786:0;ll  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/System/Library/Frameworks/OpenGL.framework
+: 1754795798:0;ll  /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/System/Library/Frameworks/OpenGL.framework/Versions/Current/Headers
+: 1754795812:0;ll /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/System/Library/Frameworks/GLUT.framework
+: 1754795823:0;ll /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/System/Library/Frameworks/GLUT.framework/Versions/Current/Headers
+: 1754796211:0;/Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/System/Library/Frameworks/GLUT.framework/Headers
+: 1754796213:0;ll
+: 1754796307:0;cd -
+: 1754796470:0;cmake ..
+: 1754796474:0;cmake3 ..
+: 1754796490:0;exit
+: 1754796499:0;ll
+: 1754796501:0;cd build
+: 1754796503:0;cmake ..
+: 1754796508:0;cmake3 ..
+: 1754796518:0;cmake3 -DCMAKE_PREFIX_PATH=/opt/homebrew ..
+: 1754796621:0;cmake3 ..
+: 1754796686:0;which clang
+: 1754797008:0;ll /opt/homebrew/lib/libglut
+: 1754797036:0;brew search freeglut
+: 1754797071:0;brew info freeglut
+: 1754797087:0;ll /opt/homebrew/Cellar/freeglut/3.6.0
+: 1754797091:0;ll /opt/homebrew/Cellar/freeglut/3.6.0/lib
+: 1754797306:0;git remote -vv
+: 1754797317:0;git remote delete origin
+: 1754797340:0;git remote rename origin upstream
+: 1754797348:0;git remote add git@github.com:swcho/observation_equations.git
+: 1754797361:0;git remote add origin git@github.com:swcho/observation_equations.git
+: 1754797380:0;git checkout -B ex
+: 1754797531:0;ll
+: 1754797536:0;pwd
+: 1754797541:0;cd CMakeFiles
+: 1754797542:0;ll
+: 1754797556:0;cd view_nns.dir
+: 1754797556:0;ll
+: 1754797583:0;exit
+: 1754797586:0;cd build
+: 1754797587:0;ll
+: 1754797602:0;./view_nns
+: 1754797614:0;./adaptive_robust_loss_function_demo
