@@ -75,3 +75,7 @@
 : 1754797587:0;ll
 : 1754797602:0;./view_nns
 : 1754797614:0;./adaptive_robust_loss_function_demo
+: 1783205733:0;cd /Users/swcho/projects/temp/observation_equations/codes/c++Examples/build\
+./rectangular_object_with_unknown_width_height\
+
+: 1783638836:0;git remote -vv

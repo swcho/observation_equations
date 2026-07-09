@@ -1,3 +1,4 @@
+# %%
 from sympy import *
 import sys
 sys.path.insert(1, '..')
@@ -26,8 +27,12 @@ p_proj = point_source_global - (point_source_global_1.dot([[a,b,c,d]])) * v_pl
 delta = Matrix([0,0,0]).vec()-(point_source_global - p_proj)
 delta_jacobian=delta.jacobian(all_symbols)
 
-print(delta)
-print(delta_jacobian)
+init_printing()
+# pprint(delta)
+# pprint(delta_jacobian)
+# display(delta)
+# display(delta_jacobian)
+
 
 with open("point_to_projection_onto_plane_quaternion_wc_jacobian.h",'w') as f_cpp:  
     f_cpp.write("inline void point_to_projection_onto_plane_quaternion_wc(Eigen::Matrix<double, 3, 1> &delta, double px, double py, double pz, double q0, double q1, double q2, double q3, double x_src_l, double y_src_l, double z_src_l, double x_trg_g, double y_trg_g, double z_trg_g, double a, double b, double c)\n")
@@ -44,3 +49,5 @@ with open("point_to_projection_onto_plane_quaternion_wc_jacobian.h",'w') as f_cp
             f_cpp.write("j.coeffRef(%d,%d) = %s;\n"%(i,j, ccode(delta_jacobian[i,j])))
     f_cpp.write("}")
 
+
+delta_jacobian

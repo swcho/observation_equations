@@ -358,7 +358,9 @@ int main(int argc, char *argv[]){
     glutDisplayFunc(display);
     glutMouseFunc(mouse);
     glutMotionFunc(motion);
+#ifdef __FREEGLUT_EXT_H__  // Apple GLUT.framework has no glutMouseWheelFunc
     glutMouseWheelFunc(wheel);
+#endif
     glutMainLoop();
 
     ImGui_ImplOpenGL2_Shutdown();

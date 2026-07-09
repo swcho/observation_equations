@@ -33,13 +33,19 @@ endif()
 if (WIN32)
 	include_directories(3rdparty/freeglut-3.2.2/include/)
 	add_subdirectory(3rdparty/freeglut-3.2.2)
+elseif (APPLE)
+	# Homebrew's freeglut 3.6.0 on macOS is an X11/Mesa build whose GLX context
+	# creation fails on Apple Silicon: glutCreateWindow() returns without a valid
+	# GL context, so the first GL call segfaults (EXC_BAD_ACCESS). Use the native
+	# Apple GLUT.framework instead (no X11/XQuartz required). The examples only use
+	# standard GLUT symbols, so a small shim redirects <GL/freeglut.h> to
+	# <GLUT/glut.h>.
+	include_directories(${CMAKE_CURRENT_SOURCE_DIR}/3rdparty/apple_glut_compat)
+	set(GLUT_glut_LIBRARY "-framework GLUT")
+	message("Using native Apple GLUT.framework (no X11)")
 else()
 	find_package(GLUT REQUIRED)
 	if(GLUT_FOUND)
-		# set freeglut from homebrew
-		set(GLUT_glut_LIBRARY /opt/homebrew/Cellar/freeglut/3.6.0/lib/libglut.dylib)
-		include_directories(/opt/homebrew/Cellar/freeglut/3.6.0/include)
-
 		message("GLUT found")
 		message ("GLUT_glut_LIBRARY: " ${GLUT_glut_LIBRARY})
 	endif()

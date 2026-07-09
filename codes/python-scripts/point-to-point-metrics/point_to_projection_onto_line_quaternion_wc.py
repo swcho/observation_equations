@@ -1,3 +1,5 @@
+# %%
+
 from sympy import *
 import sys
 sys.path.insert(1, '..')
@@ -44,3 +46,5 @@ with open("point_to_projection_onto_line_quaternion_wc_jacobian.h",'w') as f_cpp
             f_cpp.write("j.coeffRef(%d,%d) = %s;\n"%(i,j, ccode(delta_jacobian[i,j])))
     f_cpp.write("}")
 
+
+delta_jacobian

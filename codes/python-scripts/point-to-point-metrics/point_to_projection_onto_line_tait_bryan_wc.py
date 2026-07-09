@@ -1,3 +1,4 @@
+# %%
 from sympy import *
 import sys
 sys.path.insert(1, '..')
@@ -64,3 +65,4 @@ with open("point_to_projection_onto_line_tait_bryan_wc_jacobian.h",'w') as f_cpp
     f_cpp.write("}\n")
     f_cpp.write("#endif\n") 
 
+delta

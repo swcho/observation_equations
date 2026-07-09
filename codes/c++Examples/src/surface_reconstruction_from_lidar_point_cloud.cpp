@@ -218,6 +218,11 @@ void keyboard(unsigned char key, int /*x*/, int /*y*/) {
 			glutDestroyWindow(glutGetWindow());
 			return;
 		}
+		case 'r':{
+			vertices = vertices_odo;
+			std::cout << "mesh reset to initial state" << std::endl;
+			break;
+		}
 		case 'n':{
 			for(size_t i = 0 ; i < vertices.size(); i++){
 				TaitBryanPose pose;
@@ -1097,6 +1102,7 @@ void printHelp() {
 	std::cout << "x: optimize (smoothness constraint and source to target)" << std::endl;
 	std::cout << "z: optimize (smoothness constraint and linear function constraint)" << std::endl;
 	std::cout << "n: add noise to mesh" << std::endl;
+	std::cout << "r: reset mesh to initial state" << std::endl;
 }
 
 
